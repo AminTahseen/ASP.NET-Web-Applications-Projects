@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="Eshopping.WebPages.admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <style>
+        
+         .navbar-brand.navbar-image {
+             padding: 0 20px 0 0;
+             display: flex;
+         }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+          <nav class="navbar navbar-default navbar-static-top navbar-fixed-top" "navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand navbar-image" href="#"><img src="http://placehold.it/180x60/FFF/00000/&amp;text=KhareedLo.Pk" alt=""></a>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="View_cust_orders.aspx">Check Customers Orders</a></li>
+        <li><a href="payment_details.aspx">Check Payment Details</a></li>
+        <li><a href="AddProducts.aspx">Manage Products</a></li>
+      </ul>
+        <asp:Button ID="Button1" runat="server" Text="Logout" CssClass="btn btn-danger navbar-btn" OnClick="Button1_Click" />
+    
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
+        <br />
+           <br />
+           <br />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+         <br />
+        <footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+            <hr />
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+   <a href="#"> KhareedLo.pk</a>
+      <p> Is A Registered Website All Rights Reserved</p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+    </form>
+</body>
+</html>

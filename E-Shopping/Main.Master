@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="Eshopping.WebPages.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+     <style>
+    .carousel-inner img {
+      width: 100%;
+      height:50px;/* Set width to 100% */
+      min-height: 200px;
+    }
+
+         .navbar-brand.navbar-image {
+             padding: 0 20px 0 0;
+             display: flex;
+         }
+         
+.outer-wrapper { 
+display: table;
+width: 100%;
+height: 100%;
+}
+
+.inner-wrapper {
+  display:table-cell;
+  vertical-align:middle;
+  padding:15px;
+}
+.login-btn { position:fixed; top:15px; right:15px; }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; 
+      }
+  }
+    }
+  </style>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+      <nav class="navbar navbar-default navbar-static-top navbar-fixed-top" "navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand navbar-image" href="#"><img src="http://placehold.it/180x60/FFF/00000/&amp;text=KhareedLo.Pk" alt=""></a>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="Home.aspx">Home</a></li>
+        <li><a href="contact.aspx">Contact Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">     
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="login.aspx">Login Now</a></li>
+            <li><a href="CreateAccount.aspx">Create An Account</a></li>
+          <li><a href="Profile.aspx">Account Profile</a></li>
+          </ul>
+        </li>
+       <li><a href="buyProducts.aspx">Buy Products</a></li>
+       <li><a href="ViewOrders.aspx">My Orders</a></li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
+        <br />
+           <br />
+           <br />
+        <div>
+ <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+</asp:ContentPlaceHolder>
+        </div>
+        <br />
+        <footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+            <hr />
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="#"> KhareedLo.pk</a>
+      <p> Is A Registered Website All Rights Reserved</p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+    </form>
+</body>
+</html>
